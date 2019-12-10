@@ -1,6 +1,6 @@
 package sr.bad;
 
-public class SingleResponsibility {
+public class SingleResponsibilityExample {
 
     public static void main(String[] args) {
 
