@@ -1,6 +1,6 @@
-package oc.bad;
+package solid.oc.bad;
 
-public class Rectangle {
+public class Triangle {
 
     private double weight;
 

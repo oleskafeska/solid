@@ -1,4 +1,4 @@
-package sr.good;
+package solid.sr.good;
 
 public class User {
 

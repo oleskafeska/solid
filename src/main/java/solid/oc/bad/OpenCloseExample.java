@@ -1,4 +1,4 @@
-package oc.bad;
+package solid.oc.bad;
 
 public class OpenCloseExample {
 

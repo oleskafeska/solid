@@ -1,4 +1,4 @@
-package oc.good;
+package solid.oc.good;
 
 public abstract class Shape {
 
