@@ -1,4 +1,4 @@
-package sr.bad;
+package solid.sr.bad;
 
 import java.util.HashMap;
 import java.util.Map;

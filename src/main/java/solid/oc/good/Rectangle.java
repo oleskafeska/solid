@@ -1,6 +1,6 @@
-package oc.bad;
+package solid.oc.good;
 
-public class Triangle {
+public class Rectangle extends Shape {
 
     private double weight;
 
@@ -20,5 +20,10 @@ public class Triangle {
 
     public void setHeight(double height) {
         this.height = height;
+    }
+
+    @Override
+    double getArea() {
+        return height * weight;
     }
 }

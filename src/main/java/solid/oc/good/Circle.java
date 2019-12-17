@@ -1,8 +1,9 @@
-package oc.bad;
+package solid.oc.good;
 
-public class Circle {
+public class Circle extends Shape {
 
     private double radius;
+
 
     public double getRadius() {
         return radius;
@@ -10,5 +11,10 @@ public class Circle {
 
     public void setRadius(double radius) {
         this.radius = radius;
+    }
+
+    @Override
+    double getArea() {
+        return radius*radius*Math.PI;
     }
 }

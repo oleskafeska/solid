@@ -1,4 +1,4 @@
-package sr.bad;
+package solid.sr.bad;
 
 public class SingleResponsibilityExample {
 
