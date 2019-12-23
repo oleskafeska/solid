@@ -2,69 +2,58 @@ package dry;
 
 public class DryExample {
 
-  private static final String importantData = "I_am_important_data";
-
   public static void main(String[] args) {
 
-    // some copy-paste
-    printData();
-    printDataWithSpecificCase();
-
-    System.out.println("\n");
-
-    // better
-    printDataBetter(importantData);
-    printDataWithSpecificCaseBetter(importantData);
+    // bad
+    addUser("some user");
+    addBook("some book");
   }
 
-  /**
-   * Bad, because some data just copy-pasted
-   */
-  private static void printData() {
+  private static void addUser(String user) {
 
-    String formattedData = importantData.replace("_", " ");
+    String nameOfTable = "user";
 
-    String formattedUpperCaseData = formattedData.toUpperCase();
+    try {
 
-    System.out.println(formattedUpperCaseData);
+      String query = "Insert user into " + nameOfTable + user;
+
+      System.out.println("executing query : " + query);
+
+      Thread.sleep(10000);
+
+      System.out.println("added data to table " + nameOfTable);
+
+    } catch (Exception e) {
+
+      System.err.println("Failure during inserting of data");
+
+    } finally {
+
+      System.out.println("Connection closed");
+    }
   }
 
-  private static void printDataWithSpecificCase() {
+  private static void addBook(String book) {
 
-    String message = "I am message";
+    String nameOfTable = "book";
+    try {
 
-    String formattedData = importantData.replace("_", " ");
+      String query = "Insert book into " + nameOfTable + book;
 
-    String formattedUpperCaseData = formattedData.toUpperCase();
+      System.out.println("executing query : " + query);
 
-    System.out.println(formattedUpperCaseData + ". " + message);
+      Thread.sleep(10000);
+
+      System.out.println("added data to table " + nameOfTable);
+
+    } catch (Exception e) {
+
+      System.err.println("Failure during inserting of data");
+
+    } finally {
+
+      System.out.println("Connection closed");
+    }
   }
 
-  //-------------------------------------------------------------
-
-  /**
-   * Still not so good, but we move common logic to the separate method
-   */
-  private static String formatData(String importantData) {
-
-    String formattedData = importantData.replace("_", " ");
-
-    return formattedData.toUpperCase();
-  }
-
-  private static void printDataBetter(String importantData) {
-
-    String formattedData = formatData(importantData);
-
-    System.out.println(formattedData);
-  }
-
-  private static void printDataWithSpecificCaseBetter(String importantData) {
-
-    String message = "I am message";
-
-    String formattedData = formatData(importantData);
-
-    System.out.println(formattedData + ". " + message);
-  }
 }
