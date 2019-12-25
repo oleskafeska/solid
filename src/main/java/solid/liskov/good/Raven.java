@@ -1,19 +1,19 @@
 package solid.liskov.good;
 
-public class Duck extends FlyingBird {
-
-    public Duck(String birdName) {
-        super(birdName);
-    }
+public class Raven extends FlyingBird {
 
     @Override
     public void fly() {
-        System.out.println("I can fly");
+
     }
 
     @Override
     public void eat() {
-        System.out.println("I am eating");
+
+    }
+
+    public Raven(String birdName) {
+        super(birdName);
     }
 
     @Override
