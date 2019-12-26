@@ -4,7 +4,6 @@ public class Circle extends Shape {
 
     private double radius;
 
-
     public double getRadius() {
         return radius;
     }
@@ -15,6 +14,6 @@ public class Circle extends Shape {
 
     @Override
     double getArea() {
-        return radius*radius*Math.PI;
+        return radius*radius*3.1416;
     }
 }

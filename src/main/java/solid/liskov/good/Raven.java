@@ -5,6 +5,7 @@ public class Raven extends FlyingBird {
     @Override
     public void fly() {
 
+        // some logic
     }
 
     @Override

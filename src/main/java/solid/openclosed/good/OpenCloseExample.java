@@ -9,5 +9,9 @@ public class OpenCloseExample {
         rectangle.setWeight(34.5);
 
         System.out.println(rectangle.getArea());
+
+        Circle circle = new Circle();
+        circle.setRadius(23);
+        double area = circle.getArea();
     }
 }

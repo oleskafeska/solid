@@ -4,7 +4,9 @@ public class KissExample {
 
     public static void main(String[] args) {
 
-        if (checkIfHorrible(true)) {
+        boolean answer = true;
+
+        if (answer) {
 
             System.out.println("Oh my...");
         }
@@ -12,10 +14,6 @@ public class KissExample {
 
     private static boolean checkIfHorrible(boolean isItBad) {
 
-        if (isItBad) {
-            return true;
-        } else {
-            return false;
-        }
+        return isItBad;
     }
 }

@@ -8,15 +8,10 @@ public class LiskovExample {
 
         penguin.eat();
 
-        FlyingBird duck = new Duck("Duck");
-
-        goFly(duck);
-        goEat(duck);
-
-        FlyingBird raven = new Raven("Raven");
+        FlyingBird raven = new Duck("fdg");
 
         goFly(raven);
-        goEat(raven);
+        Bird flyingBird = goEat(raven);
     }
 
     private static void goFly(FlyingBird bird) {
@@ -24,7 +19,7 @@ public class LiskovExample {
         System.out.println(bird + " go fly!");
     }
 
-    private static FlyingBird goEat(FlyingBird bird) {
+    private static Bird goEat(Bird bird) {
         bird.eat();
         return bird;
     }

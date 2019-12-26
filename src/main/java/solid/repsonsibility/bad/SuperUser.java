@@ -2,6 +2,7 @@ package solid.repsonsibility.bad;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class SuperUser {
 
@@ -21,6 +22,14 @@ public class SuperUser {
     public String getPost(String userId) {
 
         return posts.get(userId);
+    }
+
+    public void editPost(String post, String userId) {
+        String existingPost = posts.get(userId);
+
+        if (Objects.nonNull(existingPost)) {
+            posts.put(userId, post);
+        } else throw new IllegalArgumentException("Post not found!");
     }
 
     public void setPost(String post, String userId) {

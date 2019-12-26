@@ -2,6 +2,11 @@ package solid.openclosed.bad;
 
 public class AreaCalculator {
 
+//    public double calculateArea(Rectangle rectangle) {
+//
+//        return rectangle.getHeight() * rectangle.getWeight();
+//    }
+
     public double calculateArea(Object shape) {
 
         double area = 0.0;

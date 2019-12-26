@@ -8,8 +8,10 @@ public class SingleResponsibilityExample {
 
         superUser.setName("John");
         superUser.setUserId("1234");
-        superUser.setPost("Hey, this segregation my very first post here!", superUser.getUserId());
+        superUser.setPost("Hey, this is my very first post here!", superUser.getUserId());
 
         System.out.println(superUser.getPost(superUser.getUserId()));
+
+        superUser.editPost("Edited post", superUser.getUserId());
     }
 }
