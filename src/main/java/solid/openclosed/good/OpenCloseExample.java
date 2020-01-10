@@ -12,5 +12,7 @@ public class OpenCloseExample {
 
         Circle circle = new Circle();
         circle.setRadius(23);
+
+        System.out.println(circle.getArea());
     }
 }
